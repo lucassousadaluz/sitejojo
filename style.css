@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Raleway:wght@300..700&display=swap');
+
+body {
+    background-image: url(jojo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #f5ede2;
+    background-size: cover;
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#titulo {
+    background-color: rgba(8, 13, 51, 0.7); /* Cor mais suave */
+    color: #f5ede2;
+    text-align: center;
+    font-family: "Press Start 2P", cursive;
+    font-weight: 400;
+    font-size: 60px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#subtitulo {
+    background-color: #f5ede2;
+    color: #080D33;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 10px;
+    border: 2px solid #080D33;
+    border-radius: 10px;
+    
+}
+
+
+#textocorpo {
+    margin: auto;
+    text-align: center;
+    word-wrap: break-word;
+    width: 70%;
+    padding: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 30px;
+    color: #080D33;
+    margin-top: 20px;
+    text-decoration: underline;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 18px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    margin-top: 30px;
+}
+
+.menu-item {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.menu-item:hover img {
+    opacity: 0.8;
+}
+
+.frase-exibida {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.menu-item:hover .frase-exibida {
+    opacity: 1;
+}
+
+footer {
+    background-color: #080D33;
+    color: #f5ede2;
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+    position: relative;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Header (voltar ao menu) */
+header {
+    background-color: rgba(8, 13, 51, 0.8);
+    padding: 15px;
+    text-align: center;
+    
+}
+
+#logo-back {
+    color: #f5ede2;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#logo-back .back-icon {
+    width: 20px;
+    height: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #textocorpo {
+        width: 90%;
+    }
+    
+    .menu {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .menu-item {
+        width: 180px;
+        height: 270px;
+    }
+
+    #titulo {
+        font-size: 40px;
+    }
+
+    #subtitulo {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
+}
